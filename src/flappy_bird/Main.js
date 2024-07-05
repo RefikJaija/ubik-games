@@ -232,6 +232,12 @@ ubik.update = (dt) => {
         bird.mesh.children[0].material.map = ubik.assets.get('birdwingdown'); // Set wing texture to down
     }
 
+     // Check if bird is out of the window view
+     if (bird.position.y > windowTopBoundary || bird.position.y < windowBottomBoundary) {
+        gameOver();
+    }
+
+
     // Update pipes
     updatePipes(pipes, dt);
 };
