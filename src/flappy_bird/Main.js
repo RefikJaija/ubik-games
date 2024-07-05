@@ -124,7 +124,7 @@ ubik.assets.onAssetsLoaded(() => {
     if (wingMaterial.map) {
         ubik.logger.info('Bird wing texture loaded');
     } else {
-        ubik.logger.error('Bird wing texture not loaded');
+        ubik.logger.info('Bird wing texture not loaded');
     }
 
     // Add wing as a child of the bird's mesh
